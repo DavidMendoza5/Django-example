@@ -7,7 +7,7 @@ import datetime
 class Question(models.Model):
   # CharField recibe un parámetro obligatorio que es max_length
   question_text = models.CharField(max_length=200)
-  pub_date = models.DateTimeField('date published')
+  pub_date = models.DateTimeField(auto_now_add=True)
 
   # Método que sirve para mostrar un campo en específico en la consola interactiva de Django
   def __str__(self):
